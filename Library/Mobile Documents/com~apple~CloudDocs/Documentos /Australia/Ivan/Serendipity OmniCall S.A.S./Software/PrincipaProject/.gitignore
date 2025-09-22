@@ -1,0 +1,18 @@
+# Archivo .gitignore
+# Ignorar entorno virtual
+/venv
+
+# Ignorar variables de entorno
+.env
+
+# Ignorar archivos específicos de Django
+db.sqlite3
+__pycache__/
+*.pyc
+*.sqlite3
+
+# Ignorar archivos de macOS (si aplica)
+.DS_Store
+
+# Ignorar archivos de VS Code (si aplica)
+.vscode/

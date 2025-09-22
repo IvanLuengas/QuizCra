@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendipity OmniCall S.A.S.</title>
+    <link rel="icon" href="https://placehold.co/32x32/1e40af/ffffff?text=S" type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+        }
+        .hero-section {
+            background-image: linear-gradient(to right, #1e40af, #3b82f6);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navegación -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-700" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 15c0 1.66-1.34 3-3 3h-2v2h-2v-2h-4v2H8v-2H6c-1.66 0-3-1.34-3-3V9c0-1.66 1.34-3 3-3h2V4h2v2h4V4h2v2h2c1.66 0 3 1.34 3 3v6zM7 9h2v2H7V9zm8 0h2v2h-2V9zm0 4h2v2h-2v-2zm-8 0h2v2H7v-2z"/>
+                </svg>
+                <a href="#" class="text-2xl font-bold text-blue-700">Serendipity</a>
+            </div>
+            <div class="hidden md:flex space-x-6 text-gray-700 font-medium">
+                <a href="#about" class="hover:text-blue-600 transition duration-300">Nosotros</a>
+                <a href="#services" class="hover:text-blue-600 transition duration-300">Servicios</a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-300">Contacto</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menú móvil (oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="flex flex-col items-center py-4 space-y-4 font-medium text-gray-700">
+                <a href="#about" class="hover:text-blue-600 transition duration-300">Nosotros</a>
+                <a href="#services" class="hover:text-blue-600 transition duration-300">Servicios</a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-300">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Héroe -->
+        <section class="hero-section text-white py-20 md:py-32 rounded-b-3xl">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-shadow">Optimizamos tus procesos de contacto</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                    Soluciones especializadas en contact center y servicios financieros para el sector B2B.
+                </p>
+                <a href="#contact" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Nosotros -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Nuestra Misión y Filosofía</h2>
+                <div class="md:flex items-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            Somos una empresa especializada en soluciones de contact center y financieras, con un enfoque en el sector médico B2B. Nuestra misión es optimizar los procesos de nuestros clientes a través de la tecnología y los datos, ofreciendo servicios de agendamiento, generación de leads y más.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Nuestra filosofía se basa en la **transparencia**, la **flexibilidad** y un fuerte **compromiso** con el control y el respaldo al cliente. Creemos en la excelencia, el liderazgo y la confianza como pilares fundamentales de nuestro trabajo.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/e2e8f0/4a5568?text=Nuestra+Mision" alt="Imagen de la misión de la empresa" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="services" class="py-16 md:py-24 bg-blue-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Nuestros Servicios</h2>
+                <p class="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Ofrecemos soluciones personalizadas para el sector médico, enfocadas en mejorar la eficiencia y la rentabilidad de nuestros clientes.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tarjeta de Servicio 1: Agendamiento y Recordatorio de Citas -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg service-card">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-blue-600 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 16H6V10h12v10zm0-12H6V6h12v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Agendamiento y Recordatorio</h3>
+                        <p class="text-gray-600">
+                            Gestión integral de citas y recordatorios para optimizar la agenda de consultorios y clínicas.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 2: Generación de Leads -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg service-card">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-blue-600 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Generación de Leads</h3>
+                        <p class="text-gray-600">
+                            Estrategias de venta y conversión de clientes para identificar y captar nuevos prospectos.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta de Servicio 3: Contact Center Financiero -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg service-card">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-blue-600 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 11c1.66 0 2.99-1.34 2.99-3S13.66 5 12 5s-3 1.34-3 3 1.34 3 3 3zm0 2c-2.76 0-5 2.24-5 5h10c0-2.76-2.24-5-5-5zM4 14H2v6h2c0-2.76 2.24-5 5-5H7c-2.76 0-5 2.24-5 5v-6h2v-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Soluciones Financieras</h3>
+                        <p class="text-gray-600">
+                            Servicios especializados en el sector financiero, desde el seguimiento de cartera hasta la gestión de cobro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800">Contáctanos</h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                    ¿Listo para optimizar tus procesos? Déjanos un mensaje y te responderemos lo antes posible.
+                </p>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <form action="#" method="post">
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <input type="text" id="name" name="name" placeholder="Tu Nombre" class="w-full px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" class="w-full px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <textarea id="message" name="message" rows="4" placeholder="Tu Mensaje" class="w-full px-4 py-2 border rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-blue-800 transition duration-300 w-full">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white py-8 rounded-t-3xl mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Serendipity OmniCall S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para el menú móvil
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
